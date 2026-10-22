@@ -1,0 +1,9 @@
+{
+  "name": "wiki-qa-eval",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "agents": "^0.28.1",
+    "ai": "^7.0.142"
+  }
+}

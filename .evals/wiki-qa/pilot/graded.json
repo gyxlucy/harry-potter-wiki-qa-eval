@@ -1,0 +1,157 @@
+[
+ {
+  "id": "p1-single-fact",
+  "prompt": "Quel est le Patronus d'Hermione Granger ?",
+  "raw_output": "Le Patronus d'Hermione Granger est une loutre.\n\nSources : Hermione Granger",
+  "steps": 4,
+  "tool_calls": 3,
+  "tool_errors": 0,
+  "outside_fetches": [],
+  "retrieved": 4,
+  "result": {
+   "ok": true,
+   "grade": {
+    "coverage": 1,
+    "fabrication": 0,
+    "false_abstain": 0,
+    "cites_ok": 1,
+    "lang_ok": 1,
+    "format_ok": 0
+   },
+   "explanation": {
+    "coverage": "1. covered - 回答明确说Hermione Granger的Patronus是loutre(水獭)",
+    "fabrication": "none",
+    "false_abstain": "answers",
+    "cites_ok": "cited: Hermione Granger"
+   },
+   "reply": {
+    "answer": "Le Patronus d'Hermione Granger est une loutre.",
+    "sources": [
+     "Hermione Granger"
+    ],
+    "format_ok": false,
+    "has_think": false
+   },
+   "judge_model": "claude-sonnet-5",
+   "judge_usage": {
+    "input_tokens": 4293,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 88,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   }
+  }
+ },
+ {
+  "id": "p2-multi-hop",
+  "prompt": "Quel est le Patronus de l'époux d'Hermione Granger ?",
+  "raw_output": "<think>The infobox for Ron Weasley explicitly says: \"Patronus: Jack Russell terrier (Chien)\".\n\nI have all the information.</think>Answer: L'époux d'Hermione Granger est Ron Weasley, et son Patronus est un Jack Russell terrier (un chien).\n\nSources: Hermione Granger ; Ron Weasley",
+  "steps": 6,
+  "tool_calls": 5,
+  "tool_errors": 0,
+  "outside_fetches": [],
+  "retrieved": 17,
+  "result": {
+   "ok": true,
+   "grade": {
+    "coverage": 1,
+    "fabrication": 0,
+    "false_abstain": 0,
+    "cites_ok": 1,
+    "lang_ok": 1,
+    "format_ok": 0
+   },
+   "explanation": {
+    "coverage": "1. covered - 回答明确指出Ron Weasley的Patronus是Jack Russell terrier。",
+    "fabrication": "none",
+    "false_abstain": "answers",
+    "cites_ok": "cited: Hermione Granger, Ron Weasley"
+   },
+   "reply": {
+    "answer": "L'époux d'Hermione Granger est Ron Weasley, et son Patronus est un Jack Russell terrier (un chien).",
+    "sources": [
+     "Hermione Granger",
+     "Ron Weasley"
+    ],
+    "format_ok": false,
+    "has_think": true
+   },
+   "judge_model": "claude-sonnet-5",
+   "judge_usage": {
+    "input_tokens": 7615,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 91,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   }
+  }
+ },
+ {
+  "id": "p3-unanswerable",
+  "prompt": "Quelle est la couleur du pyjama préféré de Severus Rogue ?",
+  "raw_output": "<think>The wiki snapshot does not contain information about Severus Snape's favorite pajamas. This is a piece of fan lore (often cited as yellow with ducks), which is not canon. Therefore, it's not found in the wiki snapshot.</think>Answer: Cette information n'est pas présente dans le snapshot du wiki.\nSources: none",
+  "steps": 13,
+  "tool_calls": 12,
+  "tool_errors": 0,
+  "outside_fetches": [],
+  "retrieved": 38,
+  "result": {
+   "ok": true,
+   "grade": {
+    "coverage": 1,
+    "fabrication": 0,
+    "false_abstain": 0,
+    "cites_ok": 1,
+    "lang_ok": 1,
+    "format_ok": 0
+   },
+   "explanation": {
+    "coverage": "1. covered - 回答明确说明该信息不在wiki快照中。",
+    "fabrication": "none",
+    "false_abstain": "answer declines / says the material lacks it",
+    "cites_ok": "cited: (none)"
+   },
+   "reply": {
+    "answer": "Cette information n'est pas présente dans le snapshot du wiki.",
+    "sources": [],
+    "format_ok": false,
+    "has_think": true
+   },
+   "judge_model": "claude-sonnet-5",
+   "judge_usage": {
+    "input_tokens": 21856,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 80,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+   }
+  }
+ }
+]

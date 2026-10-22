@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "skills": {
+    "cavia-agent": {
+      "source": "cavia.tabbyml.workers.dev",
+      "sourceType": "well-known",
+      "computedHash": "93706eb99fb44c05a105d817bad10a8590d3867ef1b7e928f25b72be02066c87"
+    }
+  }
+}

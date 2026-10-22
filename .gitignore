@@ -1,0 +1,17 @@
+# the 2020-02-15 French wiki dump and everything derived from it (large; rebuild with .evals/wiki-qa/prep/)
+harrypotterfandomcom_fr-20200215-history.xml/
+harrypotterfandomcom_fr-20200215-history.xml.7z
+.evals/wiki-qa/prep/articles.jsonl
+.evals/wiki-qa/prep/wiki.sqlite
+.evals/wiki-qa/prep/wiki.sqlite.gz
+
+node_modules/
+.DS_Store
+
+# full Cavia transcripts, kept locally so a failed grade can be retried without re-running the agent
+.evals/wiki-qa/*/raw/
+.evals/wiki-qa/*/raw-failed/
+
+# installed skill (restore with the entry in skills-lock.json)
+.agents/
+.claude/

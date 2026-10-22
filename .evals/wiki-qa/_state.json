@@ -1,0 +1,108 @@
+{
+  "fingerprints": {
+    "baseline": {
+      "model": "bright-rain",
+      "judge_model": "claude-sonnet-5",
+      "system_prompt_sha": "589a23663016029ef724743c1140b03f80653b6c5228a1f8da44b5402231eb9a",
+      "request_json_sha": "c2698bc8edd8f6a5cc8d6bbcdd29a5f5b83dbb1d2d25bec6583ae6bb40346cfa",
+      "skill_digests": [
+        "sha256:bfa88edb1020a25b6677260a3671749e2ede4bf88cf18d8c1d436c776fb7cdae"
+      ],
+      "cases_sha": "63fb2a5a394fd3491b19bfac3138cd4fc8ed09168b0862eed7be8538baa05661",
+      "grader_sha": "320e3a0b53cad10201560947f1678ea4102d3f251da7fdc8027978c830ba2cc2",
+      "runner_sha": "d905d380470235cbaaed6859c95f74570ac03cb8a0ee74b384c8cad8cf4bc00f"
+    },
+    "washed-bacon": {
+      "model": "washed-bacon",
+      "judge_model": "claude-sonnet-5",
+      "system_prompt_sha": "589a23663016029ef724743c1140b03f80653b6c5228a1f8da44b5402231eb9a",
+      "request_json_sha": "c2698bc8edd8f6a5cc8d6bbcdd29a5f5b83dbb1d2d25bec6583ae6bb40346cfa",
+      "skill_digests": [
+        "sha256:bfa88edb1020a25b6677260a3671749e2ede4bf88cf18d8c1d436c776fb7cdae"
+      ],
+      "cases_sha": "63fb2a5a394fd3491b19bfac3138cd4fc8ed09168b0862eed7be8538baa05661",
+      "grader_sha": "320e3a0b53cad10201560947f1678ea4102d3f251da7fdc8027978c830ba2cc2",
+      "runner_sha": "d905d380470235cbaaed6859c95f74570ac03cb8a0ee74b384c8cad8cf4bc00f"
+    },
+    "haiku-5-5": {
+      "model": "claude-haiku-5-5",
+      "judge_model": "claude-sonnet-5",
+      "system_prompt_sha": "589a23663016029ef724743c1140b03f80653b6c5228a1f8da44b5402231eb9a",
+      "request_json_sha": "c2698bc8edd8f6a5cc8d6bbcdd29a5f5b83dbb1d2d25bec6583ae6bb40346cfa",
+      "skill_digests": [
+        "sha256:bfa88edb1020a25b6677260a3671749e2ede4bf88cf18d8c1d436c776fb7cdae"
+      ],
+      "cases_file": "all-cases.jsonl",
+      "cases_sha": "031ce42d660e6da3a3722600c8384ee9162fd3d485fbdad50096e33501cd9904",
+      "grader_sha": "320e3a0b53cad10201560947f1678ea4102d3f251da7fdc8027978c830ba2cc2",
+      "runner_sha": "ade63afd9a2e4f38c6a73ef3fd4d24110ae4674bc56fa48a4a3ff980da096e01"
+    }
+  },
+  "flow": "wiki-qa",
+  "current_round": 0,
+  "reps": 3,
+  "no_split": true,
+  "train_ids": [],
+  "test_ids": [],
+  "goal": {
+    "target": "coverage",
+    "direction": "higher",
+    "hold": [
+      "fabrication",
+      "false_abstain",
+      "cites_ok",
+      "lang_ok"
+    ]
+  },
+  "harness_paths": [
+    "run.ts",
+    "run-agent.ts",
+    "grade/grade.ts",
+    "grade/transcript.ts",
+    "grade/anthropic.ts",
+    "legacy/grader/judge.mjs",
+    "cases.jsonl"
+  ],
+  "metrics": [
+    {
+      "id": "coverage",
+      "kind": "judge",
+      "label": "Coverage"
+    },
+    {
+      "id": "fabrication",
+      "kind": "judge",
+      "label": "Fabrication",
+      "better": "lower"
+    },
+    {
+      "id": "false_abstain",
+      "kind": "judge",
+      "label": "False abstain",
+      "better": "lower"
+    },
+    {
+      "id": "cites_ok",
+      "kind": "float",
+      "label": "Cites ok"
+    },
+    {
+      "id": "lang_ok",
+      "kind": "float",
+      "label": "Lang ok"
+    },
+    {
+      "id": "format_ok",
+      "kind": "float",
+      "label": "Format ok"
+    }
+  ],
+  "perf_fields": [
+    {
+      "id": "latency_s",
+      "label": "Latency",
+      "unit": "s"
+    }
+  ],
+  "cost": "not measured (no approved pricing function)"
+}

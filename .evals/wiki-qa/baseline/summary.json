@@ -1,0 +1,4 @@
+{
+  "description": "Unmodified wiki-qa agent (system-prompt.md + harry-potter-wiki skill)",
+  "target": "system_prompt"
+}
